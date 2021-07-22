@@ -1,7 +1,10 @@
 require 'sinatra'
 require 'sinatra/reloader'
+require 'tilt/erubis'
 
 get '/' do
-  # should be presented with a list of all files in the public directory 
+  @list = Dir.children("public").select { |fname| File.ftype("public/#{fname}") == "file" }
+  @list.sort_by! { |name| name.downcase }
+
   erb :filelist
 end

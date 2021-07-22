@@ -9,16 +9,9 @@
   <body>
     <table id='list'>
       <tr id='title'><td><h3>Here are all available files!</h3></td></tr>
-      <tr><td>item</td></tr>
-      <tr><td>item</td></tr>
-      <tr><td>item</td></tr>
-      <tr><td>item</td></tr>
-      <tr><td>item</td></tr>
-      <tr><td>item</td></tr>
+      <% @list.each do |name| %>
+        <tr><td><%= name %></td></tr>
+      <% end %>
     </table>
-  # Display files
-    # Each file name should return the file itself
-    # Have option to sort by asc desc
-    # Display in table form so hovering changes background of table (wishlist!)  
   </body>
 </html>
