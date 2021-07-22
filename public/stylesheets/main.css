@@ -1,0 +1,17 @@
+body {
+  font-family: "Arial";
+}
+
+table, th, td {
+  border: none;
+  border-spacing: 5px;
+  padding: 10px;
+}
+
+tr#title{
+  background: #ffcc00;
+}
+
+tr:hover:not(#title) {
+  background: orange;
+}
