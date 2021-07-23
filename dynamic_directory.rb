@@ -1,10 +1,10 @@
 require 'sinatra'
 require 'sinatra/reloader'
 require 'tilt/erubis'
+require_relative 'public_files'
 
 get '/' do
-  @list = Dir.children("public").select { |fname| File.ftype("public/#{fname}") == "file" }
-  @list.sort_by! { |name| name.downcase }
+  @list = PublicFiles.list(params['sort'])
 
   erb :filelist
 end
