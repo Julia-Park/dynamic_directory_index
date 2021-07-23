@@ -15,3 +15,7 @@ table, th, td {
 .link:hover {
   background: orange;
 }
+
+a {
+  color: black;  
+}

@@ -8,3 +8,11 @@ get '/' do
 
   erb :filelist
 end
+
+# get "/*" do
+#   send file
+# end
+
+not_found do
+  erb :file_not_found
+end

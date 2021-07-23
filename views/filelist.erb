@@ -13,15 +13,17 @@
       </tr>
       <% @list.each do |name| %>
       <tr class="link">
-        <td colspan="2"><%= name %></td>
+        <td colspan="2">
+          <a href=<%= "/public/#{name}" %>><%= name %></a>
+        </td>
       </tr>
       <% end %>
       <tr class='desc'>
         <td colspan="2">Sort files by:</td>
       </tr>
       <tr>
-        <td class="link">Ascending</td>
-        <td class="link">Descending</td>
+        <td class="link"><a href="/?sort=ascending">Ascending</a></td>
+        <td class="link"><a href="/?sort=descending">Descending</a></td>
       </tr>
     </table>
   </body>
