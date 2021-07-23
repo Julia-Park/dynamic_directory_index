@@ -9,9 +9,10 @@ get '/' do
   erb :filelist
 end
 
-# get "/*" do
-#   send file
-# end
+get "/public/*" do
+  file = params['splat'].first
+  send_file file
+end
 
 not_found do
   erb :file_not_found

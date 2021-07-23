@@ -9,12 +9,12 @@
   <body>
     <table id='list'>
       <tr class='desc'>
-        <td colspan="2"><h3>Here are all available files!</h3></td>
+        <td colspan="2"><h3>Here are some of my favourite things!</h3></td>
       </tr>
       <% @list.each do |name| %>
       <tr class="link">
         <td colspan="2">
-          <a href=<%= "/public/#{name}" %>><%= name %></a>
+          <a href=<%= "/#{name}" %>><%= name %></a>
         </td>
       </tr>
       <% end %>
