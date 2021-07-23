@@ -8,10 +8,21 @@
   
   <body>
     <table id='list'>
-      <tr id='title'><td><h3>Here are all available files!</h3></td></tr>
+      <tr class='desc'>
+        <td colspan="2"><h3>Here are all available files!</h3></td>
+      </tr>
       <% @list.each do |name| %>
-        <tr><td><%= name %></td></tr>
+      <tr class="link">
+        <td colspan="2"><%= name %></td>
+      </tr>
       <% end %>
+      <tr class='desc'>
+        <td colspan="2">Sort files by:</td>
+      </tr>
+      <tr>
+        <td class="link">Ascending</td>
+        <td class="link">Descending</td>
+      </tr>
     </table>
   </body>
 </html>

@@ -8,10 +8,10 @@ table, th, td {
   padding: 10px;
 }
 
-tr#title{
+.desc {
   background: #ffcc00;
 }
 
-tr:hover:not(#title) {
+.link:hover {
   background: orange;
 }
